@@ -1,0 +1,27 @@
+:root {
+  --cell-size: 70px;
+}
+table {
+  background-color: blue;
+  padding: 5px;
+}
+td {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  background-color: white;
+  border-radius: 50%;
+}
+.token {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border-radius: 50%;
+  animation: 0.5s linear 1 fallenToken;
+}
+@keyframes fallenToken {
+  from {
+    transform: translateY(calc(-7 * var(--cell-size)));
+  }
+  to {
+    transform: translateY(0);
+  }
+}
